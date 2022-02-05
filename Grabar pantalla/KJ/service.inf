@@ -1,0 +1,18 @@
+[Version]
+Signature="$Windows NT$"
+SetupClass=BASE
+
+[DefaultInstall]
+AddReg=Add.Reg
+
+[Add.Reg]
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","Description",0x0,"Software licensing service"
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","DisplayName",0x0,"KMService"
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","Start",0x10001,02,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","Type",0x10001,10,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","ErrorControl",0x10001,01,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","ObjectName",0x0,"LocalSystem"
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","ImagePath",0x20000,"%11%\srvany.exe"
+HKLM,"SYSTEM\CurrentControlSet\services\KMService","FailureActions",0x1,00,00,00,00,00,00,00,00,00,00,00,00,03,00,00,00,14,00,00,00,01,00,00,00,60,ea,00,00,01,00,00,00,60,ea,00,00,00,00,00,00,00,00,00,00
+HKLM,"SYSTEM\CurrentControlSet\services\KMService\Parameters","Application",0x0,"%10%\KMService.exe"
+

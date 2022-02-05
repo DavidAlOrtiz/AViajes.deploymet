@@ -1,0 +1,213 @@
+Windows Registry Editor Version 5.00
+
+;인터넷 아이콘등록
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\explorer\Desktop\NameSpace\{871C5380-42A0-1069-A2EA-08002B30309D}]
+
+;부팅속도향상
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnableSuperfetch"=dword:00000002
+"EnablePrefetcher"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet002\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnableSuperfetch"=dword:00000002
+"EnablePrefetcher"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnableSuperfetch"=dword:00000002
+"EnablePrefetcher"=dword:00000002
+;권한부여하기
+
+[HKEY_CLASSES_ROOT\*\shell\runas]
+@="Take ownership"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\*\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas]
+@="Take ownership"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\Directory\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" /r /d y && icacls \"%1\" /grant administrators:F /t"
+
+[HKEY_CLASSES_ROOT\dllfile\shell\runas]
+@="Take ownership"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\dllfile\shell\runas\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+
+[HKEY_CLASSES_ROOT\exefile\shell\runas2]
+@="Take ownership"
+"HasLUAShield"=""
+"NoWorkingDirectory"=""
+
+[HKEY_CLASSES_ROOT\exefile\shell\runas2\command]
+@="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+"IsolatedCommand"="cmd.exe /c takeown /f \"%1\" && icacls \"%1\" /grant administrators:F"
+
+;바탕화면 아이콘
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}"=dword:00000000
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000000
+"{871C5380-42A0-1069-A2EA-08002B30309D}"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\HideDesktopIcons\NewStartPanel]
+"{59031a47-3f72-44a7-89c5-5595fe6b30ee}"=dword:00000000
+"{20D04FE0-3AEA-1069-A2D8-08002B30309D}"=dword:00000000
+"{F02C1A0D-BE21-4350-88B0-7367FC96EF3C}"=dword:00000000
+"{5399E694-6CE5-4D6C-8FCE-1D8870FDCBA0}"=dword:00000000
+"{645FF040-5081-101B-9F08-00AA002F954E}"=dword:00000000
+"{871C5380-42A0-1069-A2EA-08002B30309D}"=dword:00000000
+
+;테스크바 설정
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_ShowRun"=dword:00000001
+"Start_PowerButtonAction"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"Start_ShowRun"=dword:00000001
+"Start_PowerButtonAction"=dword:00000002
+
+;시스템복원 사용안함
+
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SystemRestore]
+[-HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\SPP]
+
+;에러 이벤트로그 사용안함
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\CrashControl]
+"AutoReboot"=dword:00000000
+"CrashDumpEnabled"=dword:00000000
+"Overwrite"=dword:00000000
+"LogEvent"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\ControlSet001\Control\CrashControl]
+"AutoReboot"=dword:00000000
+"CrashDumpEnabled"=dword:00000000
+"Overwrite"=dword:00000000
+"LogEvent"=dword:00000000
+
+;UAC OFF
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"ConsentPromptBehaviorAdmin"=dword:00000000
+"EnableLUA"=dword:00000000
+"PromptOnSecureDesktop"=dword:00000000
+
+;Shutdown Event Tracker
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability]
+"ShutdownReasonOn"=dword:00000000
+"ShutdownReasonUI"=dword:00000000
+
+;Disable Ctrl+Alt+Del
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System] 
+"disablecad"=dword:00000001
+
+;Performance for Programs
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=dword:00000026
+
+;Prevent Stuttering Sound
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"SystemResponsiveness"=dword:00000014
+
+;PowerSettings
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f]
+"FriendlyName"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,\
+  74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,44,\
+  00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,00,\
+  6c,00,2c,00,2d,00,31,00,30,00,2c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,\
+  00,20,00,44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,20,00,\
+  73,00,65,00,74,00,74,00,69,00,6e,00,67,00,73,00,00,00
+"Description"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,\
+  74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,44,\
+  00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,00,\
+  6c,00,2c,00,2d,00,31,00,31,00,2c,00,43,00,6f,00,6e,00,66,00,69,00,67,00,75,\
+  00,72,00,65,00,20,00,70,00,6f,00,77,00,65,00,72,00,20,00,73,00,65,00,74,00,\
+  74,00,69,00,6e,00,67,00,73,00,20,00,66,00,6f,00,72,00,20,00,57,00,69,00,6e,\
+  00,64,00,6f,00,77,00,73,00,20,00,44,00,72,00,65,00,61,00,6d,00,53,00,63,00,\
+  65,00,6e,00,65,00,2e,00,00,00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29]
+"FriendlyName"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,\
+  74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,44,\
+  00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,00,\
+  6c,00,2c,00,2d,00,31,00,32,00,2c,00,50,00,6f,00,77,00,65,00,72,00,20,00,53,\
+  00,61,00,76,00,69,00,6e,00,67,00,20,00,4d,00,6f,00,64,00,65,00,00,00
+"Description"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,\
+  00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,\
+  44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,\
+  00,6c,00,2c,00,2d,00,31,00,33,00,2c,00,53,00,70,00,65,00,63,00,69,00,66,00,\
+  79,00,20,00,77,00,68,00,61,00,74,00,20,00,79,00,6f,00,75,00,72,00,20,00,63,\
+  00,6f,00,6d,00,70,00,75,00,74,00,65,00,72,00,20,00,64,00,6f,00,65,00,73,00,\
+  20,00,77,00,68,00,65,00,6e,00,20,00,57,00,69,00,6e,00,64,00,6f,00,77,00,73,\
+  00,20,00,44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,20,00,\
+  69,00,73,00,20,00,6f,00,6e,00,2c,00,20,00,61,00,6e,00,64,00,20,00,70,00,6f,\
+  00,77,00,65,00,72,00,20,00,73,00,74,00,61,00,74,00,75,00,73,00,20,00,63,00,\
+  68,00,61,00,6e,00,67,00,65,00,73,00,2e,00,00,00
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29\0]
+"FriendlyName"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,\
+  00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,\
+  44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,\
+  00,6c,00,2c,00,2d,00,31,00,34,00,2c,00,48,00,69,00,67,00,68,00,20,00,50,00,\
+  65,00,72,00,66,00,6f,00,72,00,6d,00,61,00,6e,00,63,00,65,00,00,00
+"Description"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,\
+  00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,\
+  44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,\
+  00,6c,00,2c,00,2d,00,31,00,37,00,2c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,20,00,44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,20,\
+  00,77,00,69,00,6c,00,6c,00,20,00,70,00,61,00,75,00,73,00,65,00,20,00,74,00,\
+  6f,00,20,00,63,00,6f,00,6e,00,73,00,65,00,72,00,76,00,65,00,20,00,70,00,6f,\
+  00,77,00,65,00,72,00,2e,00,00,00
+"SettingValue"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29\1]
+"FriendlyName"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,00,\
+  74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,44,\
+  00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,00,\
+  6c,00,2c,00,2d,00,31,00,36,00,2c,00,50,00,6f,00,77,00,65,00,72,00,20,00,53,\
+  00,61,00,76,00,65,00,72,00,00,00
+"Description"=hex(2):40,00,25,00,53,00,79,00,73,00,74,00,65,00,6d,00,52,00,6f,00,6f,\
+  00,74,00,25,00,5c,00,53,00,79,00,73,00,74,00,65,00,6d,00,33,00,32,00,5c,00,\
+  44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,2e,00,64,00,6c,\
+  00,6c,00,2c,00,2d,00,31,00,37,00,2c,00,57,00,69,00,6e,00,64,00,6f,00,77,00,\
+  73,00,20,00,44,00,72,00,65,00,61,00,6d,00,53,00,63,00,65,00,6e,00,65,00,20,\
+  00,77,00,69,00,6c,00,6c,00,20,00,70,00,61,00,75,00,73,00,65,00,20,00,74,00,\
+  6f,00,20,00,63,00,6f,00,6e,00,73,00,65,00,72,00,76,00,65,00,20,00,70,00,6f,\
+  00,77,00,65,00,72,00,2e,00,00,00
+"SettingValue"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29\DefaultPowerSchemeValues]
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29\DefaultPowerSchemeValues\381b4222-f694-41f0-9685-ff5bb260df2e]
+"ACSettingIndex"=dword:00000000
+"DCSettingIndex"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29\DefaultPowerSchemeValues\8c5e7fda-e8bf-4a96-9a85-a6e23a8c635c]
+"ACSettingIndex"=dword:00000000
+"DCSettingIndex"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\9414a486-a59e-4159-9471-33aefe54253f\6ed1abe7-7584-4a7d-8345-20db10918d29\DefaultPowerSchemeValues\a1841308-3541-4fab-bc81-f71556f20b4a]
+"ACSettingIndex"=dword:00000000
+"DCSettingIndex"=dword:00000001
+

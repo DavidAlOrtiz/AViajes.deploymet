@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<FirstExperience>
+  <oobe>
+    <defaults>
+      <glass>1</glass>
+    </defaults>
+
+  </oobe>
+
+  <useroobe>
+    <oemLogo xmlns='http://schemas.microsoft.com/windows/oobetasks/v1'>\windows\system32\oobe\info\Ecs_bar.png</oemLogo>
+    <oemStrip xmlns='http://schemas.microsoft.com/windows/oobetasks/v1'>
+      <offerSource>Offers from Ecs.</offerSource>
+
+
+
+
+    </oemStrip>
+  </useroobe>
+</FirstExperience>
+

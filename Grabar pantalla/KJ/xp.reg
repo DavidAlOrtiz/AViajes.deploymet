@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\WPAEvents]
+"OOBETimer"=hex:ff,d5,71,d6,8b,6a,8d,6f,d5,33,93,fd
+"LastWPAEventLogged"=hex:d5,07,05,00,06,00,07,00,0f,00,38,00,24,00,fd,02
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion]
+"CurrentBuild"="1.511.1 () (Obsolete data - do not use)"
+"ProductId"="76489-640-4016287-23073"
+"DigitalProductId"=hex:a4,00,00,00,03,00,00,00,37,36,34,38,39,2d,36,34,30,2d,\
+  34,30,31,36,32,38,37,2d,32,33,30,37,33,00,2e,00,00,00,41,32,32,2d,30,30,30,\
+  30,31,00,00,00,00,00,00,00,b8,81,57,cc,eb,16,1b,86,81,8d,4a,c0,b6,dc,01,00,\
+  00,00,00,00,ef,b8,73,49,ce,4c,02,00,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,34,30,38,30,33,00,00,00,00,00,00,00,cd,18,\
+  00,00,53,81,7f,84,00,02,00,00,e3,19,00,00,00,00,00,00,00,00,00,00,00,00,00,\
+  00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,00,23,50,70,19
+"LicenseInfo"=hex:e7,77,18,a8,99,0a,6c,3b,68,70,d1,59,c5,48,7e,34,d2,26,1d,20,\
+  4a,e7,c5,61,20,de,70,92,a9,56,04,02,c6,14,fc,8e,d3,c4,a6,af,14,70,bd,94,d3,\
+  e8,8b,fd,25,1b,51,9c,40,9a,9e,ba
